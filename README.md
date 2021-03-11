@@ -81,7 +81,16 @@ $summaryResponseBody = ClockifyRepository::makeSummaryReport()
 | `page` | `page(int $page)`| 1 | ClockifyDetailedReport |  
 | `pageSize` | `pageSize(int $pageSize)`| 50 | ClockifyDetailedReport |
 
+## Testing
+```
+composer test
+``` 
 
+## Lint 
+```
+composer lint:phpcs
+composer lint:phpmd
+```
 
 ## Changelog
 
