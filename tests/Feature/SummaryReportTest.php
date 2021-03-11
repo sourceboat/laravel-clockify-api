@@ -10,7 +10,6 @@ class SummaryReportTest extends TestCase
 {
 
     /**
-     * @group test
      * @dataProvider provider
      * @param array $requestAtt
      * @param array $expected

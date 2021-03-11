@@ -2,18 +2,21 @@
 
 namespace Sourceboat\LaravelClockifyApi\Tests;
 
-use Illuminate\Support\Facades\Config;
 use Orchestra\Testbench\TestCase as OrchestraTestCase;
 
 class TestCase extends OrchestraTestCase
 {
-
-    public function setUp(): void
+    /**
+     * Define environment setup.
+     *
+     * @param  \Illuminate\Foundation\Application  $app
+     * @return void
+     */
+    protected function getEnvironmentSetUp($app)
     {
-        parent::setUp();
-
-        Config::set('clockify.api_key', '');
-        Config::set('clockify.workspace_id', '');
+        // Setup default database to use sqlite :memory:
+        $app['config']->set('clockify.api_key', '');
+        $app['config']->set('clockify.workspace_id', '');
     }
 
 }
