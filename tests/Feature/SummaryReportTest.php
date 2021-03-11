@@ -11,7 +11,6 @@ class SummaryReportTest extends TestCase
 
     /**
      * @dataProvider provider
-     *
      * @param array $requestAtt
      * @param array $expected
      * @return void
